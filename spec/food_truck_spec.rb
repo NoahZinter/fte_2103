@@ -7,4 +7,14 @@ describe FoodTruck do
 
     expect(food_truck).is_a? FoodTruck
   end
+
+  it 'has a name' do
+    food_truck = FoodTruck.new("Rocky Mountain Pies")
+
+    expect(food_truck.name).to eq 'Rocky Mountain Pies'
+  end
+
+  it 'has an empty inventory hash' do
+
+  end
 end
