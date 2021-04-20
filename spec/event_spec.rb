@@ -23,6 +23,7 @@ describe Event do
 
   describe '#add_food_truck' do
     it 'adds food trucks to array' do
+      event = Event.new("South Pearl Street Farmers Market")
       food_truck1 = FoodTruck.new("Rocky Mountain Pies")
       item1 = Item.new({name: 'Peach Pie (Slice)', price: "$3.75"})
       item2 = Item.new({name: 'Apple Pie (Slice)', price: '$2.50'})
