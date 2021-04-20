@@ -51,4 +51,8 @@ class Event
       food_trucks_that_sell(item).length > 1 && total_quantity(item) > 50
     end
   end
+
+  def sorted_item_list
+    @items.sort!
+  end
 end
