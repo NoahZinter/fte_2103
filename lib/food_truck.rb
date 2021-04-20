@@ -16,4 +16,10 @@ class FoodTruck
       inventory[item] = quantity
     end
   end
+
+  def potential_revenue
+    @inventory.map do |item, quantity|
+      item.price.gsub(/[$]/, '').to_f * quantity
+    end.sum
+  end
 end

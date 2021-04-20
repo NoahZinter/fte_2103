@@ -58,6 +58,23 @@ describe FoodTruck do
       }
 
       expect(food_truck.inventory).to eq expected
+      expect(food_truck.inventory.keys[0]).is_a? Item
+    end
+  end
+
+  describe '#potential_revenue' do
+    it 'calculates the total value of stocked items' do
+      food_truck = FoodTruck.new("Rocky Mountain Pies")
+      item1 = Item.new({name: 'Peach Pie (Slice)', price: "$3.75"})
+      item2 = Item.new({name: 'Apple Pie (Slice)', price: '$2.50'})
+      food_truck.stock(item1, 50)
+      food_truck.stock(item2, 18)
+      expected = {
+        item1 => 50,
+        item2 => 18
+      }
+
+      expect(food_truck.potential_revenue).to eq 232.5
     end
   end
 end
