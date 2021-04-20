@@ -15,6 +15,8 @@ describe FoodTruck do
   end
 
   it 'has an empty inventory hash' do
+    food_truck = FoodTruck.new("Rocky Mountain Pies")
 
+    expect(food_truck.inventory).to eq({})
   end
 end
