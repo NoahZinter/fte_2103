@@ -27,4 +27,13 @@ describe FoodTruck do
       expect(food_truck.check_stock("Borscht")).to eq 0
     end
   end
+
+  describe '#stock' do
+    it 'adds item and quantity as k/v pair in @inventory' do
+      food_truck = FoodTruck.new("Rocky Mountain Pies")
+      food_truck.stock("Kebab", 20)
+
+      expect(food_truck.check_stock("Kebab")).to eq 20
+    end
+  end
 end

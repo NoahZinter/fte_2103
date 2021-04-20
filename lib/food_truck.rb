@@ -7,4 +7,8 @@ class FoodTruck
     @inventory.default = 0
   end
 
+  def check_stock(item)
+    @inventory[:item]
+  end
+
 end
