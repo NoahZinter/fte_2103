@@ -4,6 +4,7 @@ class FoodTruck
   def initialize(name)
     @name = name
     @inventory = {}
+    @inventory.default = 0
   end
 
 end

@@ -19,4 +19,12 @@ describe FoodTruck do
 
     expect(food_truck.inventory).to eq({})
   end
+
+  describe '#check_stock' do
+    it 'returns zero as a default' do
+      food_truck = FoodTruck.new("Rocky Mountain Pies")
+
+      expect(food_truck.check_stock("Borscht")).to eq 0
+    end
+  end
 end
